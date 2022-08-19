@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gorjetas</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h1 class="titulo">Calculadora de Gorjetas</h1>
+        </div>
+        <div>
+            <form class="tipsform" id="tipsform">
+                <label for="conta">
+                    <p>Qual o valor da conta?</p>
+                </label>
+                <p>
+                    R$ <input type="number" placeholder="100" name="conta" id="conta" class="forminput">
+                </p>
+                <label for="servico">
+                    <p>Como foi o seu serviço?</p>
+                </label>
+                <p>
+                    <select name="servico" id="servico" class="formselect">
+                        <option disabled selected value="0">-- Escolha uma opção --</option>
+                        <option value="0.3">30% - Excelente</option>
+                        <option value="0.2">20% - Bom</option>
+                        <option value="0.15">15% - Aceitável</option>
+                        <option value="0.1">10% - Ruim</option>
+                        <option value="0.05">5% - Péssimo</option>
+                    </select>
+                </p>
+                <label for="pessoas">
+                    <p>Quantas pessoas dividirão a conta?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="1" name="pessoas" id="pessoas" class="forminput"> pessoa(s)
+                </p>
+                <p>
+                    <input type="submit" value="Calcular" class="formsubmit">
+                </p>
+            </form>
+            <button class="formsubmit" onclick="limpar()">Limpar</button>
+        </div>
+        <div id="total">
+            Gorjeta total:
+            R$<span id="tip">0,00</span>
+            <p id="cadaPessoa">cada</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
